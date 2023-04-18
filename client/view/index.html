@@ -1,103 +1,127 @@
 <!doctype html>
 <html>
-<head>
-<title>Weather app</title>
-</head>
-<body>
-<div id="frame">
-	<div id="leftPanel" class="leftPanel">
-		<div class="citySearchBlock">
-			<div>
-				<img class="searchBoxImage" src="https://cdn-icons-png.flaticon.com/512/4150/4150875.png"/>
-				<input placeholder="just type your city" />
+	<head>
+		<title>Weather app</title>
+		<link rel="stylesheet" href="../styles/style.css">
+	</head>
+	<body>
+		<div id="frame" class="container">
+			<div id="leftPanel" class="leftPanel">
+				<div class="leftPanelContainer">
+					<div class="citySearchBlock">
+						<img class="searchBoxImage"
+							src="https://cdn-icons-png.flaticon.com/512/4150/4150875.png"/>
+						<input class="searchBoxInput" placeholder="just type your city" />
+					</div>
+					<img class="bigImage"
+						src="https://cdn-icons-png.flaticon.com/512/4150/4150875.png"/>
+					<span class="TempbigLabel">12 C</span>
+					<span class="label">Monday, 16:00</span>
+					<div class="todayInfoContainer">
+						<div>
+							<div class="smallImage"></div>
+							<span class="label">Mostly Cloudy</span>
+						</div>
+						<div>
+							<div class="smallImage"></div>
+							<span class="label">Rain 20%</span>
+						</div>
+					</div>
+					<div class="cityImage"></div>
+				</div>
+			</div>
+			<div id="mainPanel" class="mainPanel">
+				<div class="MainPanelContainer">
+					<div class="weekTitle">
+						<span>Week</span>
+					</div>
+					<div class="weekCarouseleContainer" id="weekCarousele">
+						<div class="oneDayWeatherBox">
+							<span class="dayOfWeekLabel">Mon</span>
+							<img class="dayOfWeekImage"
+								src="https://cdn-icons-png.flaticon.com/512/4150/4150875.png"/>
+							<span class="dayOfWeekTempLabel">18 C</span>
+						</div>
+						<div class="oneDayWeatherBox">
+							<span class="dayOfWeekLabel">Mon</span>
+							<img class="dayOfWeekImage"
+								src="https://cdn-icons-png.flaticon.com/512/4150/4150875.png"/>
+							<span class="dayOfWeekTempLabel">18 C</span>
+						</div>
+						<div class="oneDayWeatherBox">
+							<span class="dayOfWeekLabel">Mon</span>
+							<img class="dayOfWeekImage"
+								src="https://cdn-icons-png.flaticon.com/512/4150/4150875.png"/>
+							<span class="dayOfWeekTempLabel">18 C</span>
+						</div>
+						<div class="oneDayWeatherBox">
+							<span class="dayOfWeekLabel">Mon</span>
+							<img class="dayOfWeekImage"
+								src="https://cdn-icons-png.flaticon.com/512/4150/4150875.png"/>
+							<span class="dayOfWeekTempLabel">18 C</span>
+						</div>
+						<div class="oneDayWeatherBox">
+							<span class="dayOfWeekLabel">Mon</span>
+							<img class="dayOfWeekImage"
+								src="https://cdn-icons-png.flaticon.com/512/4150/4150875.png"/>
+							<span class="dayOfWeekTempLabel">18 C</span>
+						</div>
+						<div class="oneDayWeatherBox">
+							<span class="dayOfWeekLabel">Mon</span>
+							<img class="dayOfWeekImage"
+								src="https://cdn-icons-png.flaticon.com/512/4150/4150875.png"/>
+							<span class="dayOfWeekTempLabel">18 C</span>
+						</div>
+						<div class="oneDayWeatherBox">
+							<span class="dayOfWeekLabel">Mon</span>
+							<img class="dayOfWeekImage"
+								src="https://cdn-icons-png.flaticon.com/512/4150/4150875.png"/>
+							<span class="dayOfWeekTempLabel">18 C</span>
+						</div>
+					</div>
+					<div>
+						<span class="highlitesLabel">Todays highligts</span>
+					</div>
+					<div id="highligthsPanel" class="highlitesPanel">
+						<div class="highliteBox">
+							<span class="highliteLabel">SomeText</span>
+							<img class="highliteImg"
+								src="https://www.svgrepo.com/show/424949/weather-air-pressure.svg"
+								/>
+						</div>
+						<div class="highliteBox">
+							<span class="highliteLabel">SomeText</span>
+							<img class="highliteImg"
+								src="https://www.svgrepo.com/show/424949/weather-air-pressure.svg"
+								/>
+						</div>
+						<div class="highliteBox">
+							<span class="highliteLabel">SomeText</span>
+							<img class="highliteImg"
+								src="https://www.svgrepo.com/show/424949/weather-air-pressure.svg"
+								/>
+						</div>
+						<div class="highliteBox">
+							<span class="highliteLabel">SomeText</span>
+							<img class="highliteImg"
+								src="https://www.svgrepo.com/show/424949/weather-air-pressure.svg"
+								/>
+						</div>
+						<div class="highliteBox">
+							<span class="highliteLabel">SomeText</span>
+							<img class="highliteImg"
+								src="https://www.svgrepo.com/show/424949/weather-air-pressure.svg"
+								/>
+						</div>
+						<div class="highliteBox">
+							<span class="highliteLabel">SomeText</span>
+							<img class="highliteImg"
+								src="https://www.svgrepo.com/show/424949/weather-air-pressure.svg"
+								/>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="bigImage"></div>
-		<div class="bigLabel"></div>
-		<div class="label"></div>
-		<div>
-			<div>
-				<div class="smallImage"></div>
-				<div class="label"></div>
-			</div>
-			<div>
-				<div class="smallImage"></div>
-				<div class="label"></div>
-			</div>
-		</div>
-		<div class="cityImage"></div>
-	</div>
-	<div id="mainPanel" class="mainPanel">
-		<div class="weekTitle">
-			<span>Week</span>
-		</div>
-		<div id="weekCarousele">
-			<div class="oneDayWeatherBox">
-				<span class="dayOfWeekLabel">Mon</span>
-				<img class="dayOfWeekImage" src="https://cdn-icons-png.flaticon.com/512/4150/4150875.png"/>
-				<span class="dayOfWeekTempLabel">18 C</span>
-			</div>
-			<div class="oneDayWeatherBox">
-				<span class="dayOfWeekLabel">Mon</span>
-				<img class="dayOfWeekImage" src="https://cdn-icons-png.flaticon.com/512/4150/4150875.png"/>
-				<span class="dayOfWeekTempLabel">18 C</span>
-			</div>
-			<div class="oneDayWeatherBox">
-				<span class="dayOfWeekLabel">Mon</span>
-				<img class="dayOfWeekImage" src="https://cdn-icons-png.flaticon.com/512/4150/4150875.png"/>
-				<span class="dayOfWeekTempLabel">18 C</span>
-			</div>
-			<div class="oneDayWeatherBox">
-				<span class="dayOfWeekLabel">Mon</span>
-				<img class="dayOfWeekImage" src="https://cdn-icons-png.flaticon.com/512/4150/4150875.png"/>
-				<span class="dayOfWeekTempLabel">18 C</span>
-			</div>
-			<div class="oneDayWeatherBox">
-				<span class="dayOfWeekLabel">Mon</span>
-				<img class="dayOfWeekImage" src="https://cdn-icons-png.flaticon.com/512/4150/4150875.png"/>
-				<span class="dayOfWeekTempLabel">18 C</span>
-			</div>
-			<div class="oneDayWeatherBox">
-				<span class="dayOfWeekLabel">Mon</span>
-				<img class="dayOfWeekImage" src="https://cdn-icons-png.flaticon.com/512/4150/4150875.png"/>
-				<span class="dayOfWeekTempLabel">18 C</span>
-			</div>
-			<div class="oneDayWeatherBox">
-				<span class="dayOfWeekLabel">Mon</span>
-				<img class="dayOfWeekImage" src="https://cdn-icons-png.flaticon.com/512/4150/4150875.png"/>
-				<span class="dayOfWeekTempLabel">18 C</span>
-			</div>
-		</div>
-		<div>
-			<span class="highlites label">Todays highligts</span>
-		</div>
-		<div id="highligthsPanel" class="highlitesPanel">
-			<div class="highliteBox">
-				<span class="highliteLabel">SomeText</span>
-				<img src="https://www.svgrepo.com/show/424949/weather-air-pressure.svg" />
-			</div>
-			<div class="highliteBox">
-				<span class="highliteLabel">SomeText</span>
-				<img src="https://www.svgrepo.com/show/424949/weather-air-pressure.svg" />
-			</div>
-			<div class="highliteBox">
-				<span class="highliteLabel">SomeText</span>
-				<img src="https://www.svgrepo.com/show/424949/weather-air-pressure.svg" />
-			</div>
-			<div class="highliteBox">
-				<span class="highliteLabel">SomeText</span>
-				<img src="https://www.svgrepo.com/show/424949/weather-air-pressure.svg" />
-			</div>
-			<div class="highliteBox">
-				<span class="highliteLabel">SomeText</span>
-				<img src="https://www.svgrepo.com/show/424949/weather-air-pressure.svg" />
-			</div>
-			<div class="highliteBox">
-				<span class="highliteLabel">SomeText</span>
-				<img src="https://www.svgrepo.com/show/424949/weather-air-pressure.svg" />
-			</div>
-		</div>
-	</div>
-</div>
-</body>
+	</body>
 </html>

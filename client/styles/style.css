@@ -1,0 +1,115 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    min-height: 100%;
+}
+.leftPanel {
+    display: flex;
+    border: 1px black solid;
+    min-height: 100%;
+}
+.mainPanel {
+    display: flex;
+    border: 1px black solid;
+    min-height: 100%;
+    padding-left: 40px;
+    background-color: hsl(260deg 20% 97.06%);
+}
+.MainPanelContainer {
+    display: flex;
+    flex-direction: column;
+}
+.leftPanelContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    row-gap: 40px;
+}
+.citySearchBlock {
+    display: flex;
+    flex-direction: row;
+}
+.label {
+    display: flex;
+    font-size: x-large;
+}
+.TempbigLabel {
+    display: flex;
+    font-size: 70px;
+}
+.bigImage {
+    display: flex;
+    height: 200px;
+}
+.searchBoxImage {
+    display: flex;
+    height:10px;
+}
+.smallImage {
+    display: flex;
+}
+.searchBoxInput {
+    display: flex;
+}
+.todayInfoContainer {
+    display: flex;
+    flex-direction: column;
+}
+.todayInfoContainerRow {
+    display: flex;
+    flex-direction: row;
+}
+.weekTitle {
+    display: flex;
+}
+.weekCarouseleContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 20px;
+}
+.oneDayWeatherBox {
+    display: flex;
+    flex-direction: column;
+    border: 1px black solid;
+    background-color: white;
+}
+.dayOfWeekLabel {
+    display: flex;
+    justify-content: center;
+}
+.dayOfWeekImage {
+    display: flex;
+    height: 150px;
+}
+.dayOfWeekTempLabel{
+    display: flex;
+    justify-content: center;
+}
+.highlitesLabel {
+    display: flex;
+}
+.highlitesPanel {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:10px 30px;
+}
+.highliteBox {
+    display: flex;
+    flex-direction: column;
+    border: 1px black solid;
+    align-items: center;
+    align-content: center;
+    flex: 1 0 30%;
+    background-color: white;
+}
+.highliteLabel {
+    display: flex;
+    justify-content: center;
+}
+.highliteImg {
+    display: flex;
+    height: 250px;
+}
