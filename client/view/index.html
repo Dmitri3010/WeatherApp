@@ -9,9 +9,11 @@
 			<div id="leftPanel" class="leftPanel">
 				<div class="leftPanelContainer">
 					<div class="citySearchBlock">
-						<img class="searchBoxImage"
-							src="https://cdn-icons-png.flaticon.com/512/4150/4150875.png"/>
-						<input class="searchBoxInput" placeholder="just type your city" />
+						<form>
+							<label for="search">Search</label>
+							<input id="search" type="search" pattern=".*\S.*" required>
+							<span class="caret"></span>
+						</form>
 					</div>
 					<img class="bigImage"
 						src="https://cdn-icons-png.flaticon.com/512/4150/4150875.png"/>
@@ -27,14 +29,15 @@
 							<span class="label">Rain 20%</span>
 						</div>
 					</div>
-					<div class="cityImage"></div>
+					<div class="cityImage">
+						<img class="citySmallImage"
+								src="https://thumbs.dreamstime.com/b/city-street-flat-design-vector-set-urban-buildings-53602924.jpg"/>
+					</div>
 				</div>
 			</div>
 			<div id="mainPanel" class="mainPanel">
 				<div class="MainPanelContainer">
-					<div class="weekTitle">
-						<span>Week</span>
-					</div>
+						<span data-text="Week" class="titleText"></span>
 					<div class="weekCarouseleContainer" id="weekCarousele">
 						<div class="oneDayWeatherBox">
 							<span class="dayOfWeekLabel">Mon</span>
@@ -80,43 +83,43 @@
 						</div>
 					</div>
 					<div>
-						<span class="highlitesLabel">Todays highligts</span>
+						<span class="titleText" data-text="Todays highligts"></span>
 					</div>
 					<div id="highligthsPanel" class="highlitesPanel">
 						<div class="highliteBox">
 							<span class="highliteLabel">SomeText</span>
 							<img class="highliteImg"
-								src="https://www.svgrepo.com/show/424949/weather-air-pressure.svg"
+								src="https://cdn-icons-png.flaticon.com/512/728/728093.png"
 								/>
 						</div>
 						<div class="highliteBox">
 							<span class="highliteLabel">SomeText</span>
 							<img class="highliteImg"
-								src="https://www.svgrepo.com/show/424949/weather-air-pressure.svg"
+								src="https://cdn-icons-png.flaticon.com/512/728/728093.png"
 								/>
 						</div>
 						<div class="highliteBox">
 							<span class="highliteLabel">SomeText</span>
 							<img class="highliteImg"
-								src="https://www.svgrepo.com/show/424949/weather-air-pressure.svg"
+								src="https://cdn-icons-png.flaticon.com/512/728/728093.png"
 								/>
 						</div>
 						<div class="highliteBox">
 							<span class="highliteLabel">SomeText</span>
 							<img class="highliteImg"
-								src="https://www.svgrepo.com/show/424949/weather-air-pressure.svg"
+								src="https://cdn-icons-png.flaticon.com/512/728/728093.png"
 								/>
 						</div>
 						<div class="highliteBox">
 							<span class="highliteLabel">SomeText</span>
 							<img class="highliteImg"
-								src="https://www.svgrepo.com/show/424949/weather-air-pressure.svg"
+								src="https://cdn-icons-png.flaticon.com/512/728/728093.png"
 								/>
 						</div>
 						<div class="highliteBox">
 							<span class="highliteLabel">SomeText</span>
 							<img class="highliteImg"
-								src="https://www.svgrepo.com/show/424949/weather-air-pressure.svg"
+								src="https://cdn-icons-png.flaticon.com/512/728/728093.png"
 								/>
 						</div>
 					</div>
