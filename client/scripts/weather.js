@@ -15,7 +15,7 @@ const degrees = new Intl.NumberFormat('en-US', {
 });
 
 Weather.getForecastForDays = function (city, callback) {
-	const url = "http://api.openweathermap.org/data/2.5/forecast?q=" + encodeURIComponent(city) + "&cnt=7";
+	let url = "http://api.openweathermap.org/data/2.5/forecast?q=" + encodeURIComponent(city) + "&cnt=7";
 
 	if (Weather.APIKEY) {
 		url = url + "&APPID=" + Weather.APIKEY;
