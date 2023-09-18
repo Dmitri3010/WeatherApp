@@ -37,3 +37,9 @@ stages:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)'
         ArtifactName: 'continious_integration'
         publishLocation: 'Container'
+    - task: VSTest@3
+      displayName: Run Selenium tests
+      inputs:
+        testSelector: 'testAssemblies'
+        testAssemblyVer2: 'Tests/SeleniumTests/SeleniumTests/bin/Debug/net6.0/SeleniumTests.dll'
+        searchFolder: '$(System.DefaultWorkingDirectory)'
