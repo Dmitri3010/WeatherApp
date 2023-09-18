@@ -28,6 +28,7 @@ stages:
         tags: |
           $(tag)
     - task: DotNetCoreCLI@2
+      displayName: Build selenium tests
       inputs:
        command: 'build'
        projects: 'Tests/SeleniumTests/SeleniumTests/SeleniumTests.csproj'
