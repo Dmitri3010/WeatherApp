@@ -27,6 +27,10 @@ stages:
         dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
         tags: |
           $(tag)
+    - task: DotNetCoreCLI@2
+      inputs:
+       command: 'build'
+       projects: 'Tests/SeleniumTests/SeleniumTests/SeleniumTests.csproj'
     - task: PublishBuildArtifacts@1
       inputs:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)'
