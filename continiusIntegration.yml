@@ -22,32 +22,30 @@ stages:
       vmImage: windows-latest
     steps:
     - task: Docker@2
-      displayName: Build an image
-      enabled: false
+      displayName: Build and push image
       inputs:
-        command: build
-        dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
-        tags: |
-          $(tag)
-    - task: DotNetCoreCLI@2
-      displayName: Build selenium tests
-      inputs:
-       command: 'build'
-       projects: 'Tests/SeleniumTests/SeleniumTests/SeleniumTests.csproj'
-    - task: PublishBuildArtifacts@1
-      inputs:
-        PathtoPublish: 'Tests/SeleniumTests/SeleniumTests/'
-        ArtifactName: 'continious_integration'
-        publishLocation: 'Container'
+        command: 'buildAndPush'
+        Dockerfile: '**/Dockerfile'
+
   - job: Tests
     displayName: Run Selenium tests
     dependsOn: BuildJob
     pool:
       vmImage: windows-latest
     steps:
-      - task: VSTest@3
-        displayName: Run tests
-        inputs:
+     - task: DotNetCoreCLI@2
+       displayName: Build selenium tests
+       inputs:
+        command: 'build'
+        projects: 'Tests/SeleniumTests/SeleniumTests/SeleniumTests.csproj'
+     - task: VSTest@3
+       displayName: Run tests
+       inputs:
           testSelector: 'testAssemblies'
           testAssemblyVer2: 'Tests/SeleniumTests/SeleniumTests/bin/Debug/net6.0/SeleniumTests.dll'
           searchFolder: '$(System.DefaultWorkingDirectory)'
+     - task: PublishBuildArtifacts@1
+       inputs:
+         PathtoPublish: 'Tests/SeleniumTests/SeleniumTests/'
+         ArtifactName: 'continious_integration'
+         publishLocation: 'Container'
