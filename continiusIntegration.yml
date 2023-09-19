@@ -16,7 +16,7 @@ stages:
 - stage: Build
   displayName: Build image
   jobs:
-  - job: Build
+  - job: BuildJob
     displayName: Build
     pool:
       vmImage: windows-latest
@@ -41,6 +41,7 @@ stages:
         publishLocation: 'Container'
   - job: Tests
     displayName: Run Selenium tests
+    dependsOn: BuildJob
     pool:
       vmImage: windows-latest
     steps:
