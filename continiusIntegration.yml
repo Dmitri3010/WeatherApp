@@ -39,15 +39,13 @@ stages:
         PathtoPublish: 'Tests/SeleniumTests/SeleniumTests/'
         ArtifactName: 'continious_integration'
         publishLocation: 'Container'
-
-- stage: 
-  displayName: Run Selenium Tests
-  jobs: 
-    - job: Tests
-      displayName: Run Test
-      steps:
+  - job: Tests
+    displayName: Run Selenium tests
+    pool:
+      vmImage: windows-latest
+    steps:
       - task: VSTest@3
-        displayName: Run Selenium tests
+        displayName: Run tests
         inputs:
           testSelector: 'testAssemblies'
           testAssemblyVer2: 'Tests/SeleniumTests/SeleniumTests/bin/Debug/net6.0/SeleniumTests.dll'
