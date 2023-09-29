@@ -11,6 +11,8 @@ resources:
 variables:
   tag: '$(Build.BuildId)'
   isDockerNeeded : '$'
+  name : 'testName'
+  someVariable : '$(Agent.OS)'
 
 stages:
 - stage: Build
@@ -26,6 +28,12 @@ stages:
       inputs:
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
+    - task: Bash@3
+      displayName: Print variables values
+      inputs:
+        targetType: 'inline'
+        script: |
+          echo $(someVariable) $(name) $(tag)
 
   - job: Tests
     displayName: Run Selenium tests
